@@ -1,0 +1,708 @@
+PROJECT NAME: LUXA
+PRODUCT: AI-POWERED PRODUCT DISCOVERY AND SELLER CONNECTION PLATFORM
+INITIAL MARKET: NIGERIA
+INITIAL LOCAL FOCUS: ADO-EKITI AND EKITI STATE
+PLATFORM: RESPONSIVE FULL-STACK WEB APPLICATION
+
+==================================================
+1. YOUR ROLE AND MISSION
+==================================================
+
+Act as a senior product engineer, full-stack developer, AI engineer, database architect, security engineer, and product designer.
+
+Build LUXA, a real, functional, mobile-first web application that helps people discover where to buy products even when they do not know which shop sells them.
+
+Do not create only a landing page, static mockup, or non-functional prototype. Implement the actual application, connect the components, run it, test the main user journeys, and fix errors where the available environment permits.
+
+Use sensible defaults rather than asking unnecessary questions. Prioritize a working MVP before adding advanced features.
+
+BRAND IDENTITY
+
+Brand name: LUXA.
+
+Brand category: AI-powered product discovery.
+
+Brand purpose: Help people find the products they need and connect them to relevant sellers.
+
+Brand promise: Tell LUXA what you need. Discover where to get it.
+
+Brand personality: Intelligent, trustworthy, modern, accessible, efficient, and ambitious.
+
+Create a clean, premium technology brand identity. Use a refined wordmark, strong typography, a restrained palette, deliberate spacing, and a simple interface. Avoid generic AI-generated visual effects, excessive gradients, unnecessary animations, clutter, and decorative elements without purpose.
+
+Use LUXA consistently in the interface, page titles, navigation, metadata, documentation, and product copy. Do not use FINDORA or other previous working names anywhere in the application.
+
+The name is a working brand choice and has not been legally cleared. Do not claim trademark ownership or domain availability.
+
+==================================================
+2. THE PROBLEM LUXA SOLVES
+==================================================
+
+People often know what they want to purchase but do not know:
+* Which shop sells it.
+* Which websites offer it.
+* Where to find it locally.
+* What it costs at different stores.
+* Whether a seller is trustworthy.
+* Whether the product is currently available.
+
+Today, they may need to search Google, Instagram, WhatsApp, marketplaces, business directories, and physical shops separately.
+
+LUXA should reduce that effort by letting users describe what they want and discover relevant products, businesses, and purchase destinations in one experience.
+
+Example:
+A user enters: "I need a wireless microphone for recording music at home under 50,000 naira."
+
+LUXA should understand the request, search its available product catalog and enabled external discovery sources, display relevant results, and help the user contact the seller or visit the original product page.
+
+The central principle is:
+
+LUXA IS A PRODUCT DISCOVERY ENGINE, NOT JUST ANOTHER ONLINE MARKETPLACE.
+
+Registered sellers should be able to list products, but users should eventually also discover relevant public listings from businesses that have not registered, whenever authorized data sources make this possible.
+
+==================================================
+3. NON-NEGOTIABLE ACCURACY RULES
+==================================================
+
+Never fabricate:
+* Real businesses or seller identities.
+* Live product listings.
+* Prices or discounts.
+* Stock availability.
+* Ratings or customer reviews.
+* Verification badges.
+* Business contact information.
+* Delivery promises.
+* External integrations that are not configured.
+
+Clearly distinguish:
+A. Fictional demonstration products.
+B. Real listings from registered sellers.
+C. External listings discovered from permitted sources.
+D. Seller identity and verification status.
+E. Confirmed information versus unverified or outdated information.
+
+Demo listings must be visibly labelled as demonstration data. Do not present them as real shopping opportunities.
+
+If real external data is not available, tell the user that external discovery has not been configured and keep the demo application functional.
+
+==================================================
+4. REQUIRED APPLICATION PAGES
+==================================================
+
+A. HOME PAGE
+
+Create a polished, responsive homepage featuring:
+* LUXA wordmark and navigation.
+* A strong headline: "Find what you need. Discover who sells it."
+* Supporting text explaining the product discovery service.
+* A prominent search field that accepts natural-language requests.
+* A functional search button and Enter-key submission.
+* Example searches such as:
+  "Find a laptop for music production."
+  "Where can I buy a wireless microphone?"
+  "Find affordable sneakers in Ekiti."
+  "Compare phones under 300,000 naira."
+* Product category shortcuts.
+* A location selector.
+* Featured listings based only on real data or clearly labelled demonstration data.
+* A short explanation of how LUXA works.
+* A section inviting businesses to list their products.
+* A footer with About, Contact, Privacy, Terms, and Help links.
+
+Initial categories:
+Phones and Gadgets, Computers, Fashion, Home and Living, Beauty, Groceries, Accessories, Appliances, and Other.
+
+Do not make the app visually dependent on a large catalog before real data has been obtained.
+
+B. SEARCH RESULTS
+
+When a user submits a query:
+* Preserve and display the original query.
+* Interpret the request into useful search criteria.
+* Search the actual available catalog and enabled external sources.
+* Display relevant product listings.
+* Show product name, image where available, price, currency, seller or source, location, and listing freshness where known.
+* Display links to product details and original sources.
+* Support filters for category, price range, location, delivery coverage, and verification status where data supports those filters.
+* Support sorting by relevance, lowest price, highest price, and recently updated.
+* Include pagination or progressive loading.
+* Provide helpful empty states and alternative search suggestions.
+* Do not show fake result counts.
+* Do not invent matching products when no results exist.
+
+C. PRODUCT DETAILS
+
+Include:
+* Product name.
+* Product images where available.
+* Description and specifications.
+* Price and currency if supplied by a reliable source.
+* Seller or source identity.
+* Seller location or delivery information where available.
+* Original listing URL for external products.
+* Last-updated or last-checked timestamp when available.
+* Clearly labelled stock status.
+* Contact seller or visit store actions when valid contact details or URLs exist.
+* Related products supported by actual catalog data.
+
+Do not assume an external listing is still available merely because its page exists.
+
+D. SELLER PROFILE
+
+Display:
+* Public business name.
+* Business description.
+* Public contact methods.
+* Website and original product links.
+* Public location and delivery coverage when provided.
+* Available product listings.
+* Verification status and what the status means.
+* Last-updated information.
+* Report seller and report listing actions.
+
+Protect personal information that a seller has not chosen to publish.
+
+E. SELLER REGISTRATION AND DASHBOARD
+
+Build a functional seller area with:
+* Secure signup and login.
+* Business profile creation.
+* Product creation, editing, deactivation, and deletion.
+* Product name, description, category, price, currency, images, specifications, location, delivery coverage, and stock status.
+* Product update timestamps.
+* Listing status and validation feedback.
+* A dashboard showing the seller's own listings.
+* Basic inquiry tracking where supported.
+* CSV product import as a later-ready extension, not a blocker for the first version.
+
+Only authenticated, authorized sellers may manage their own records.
+
+Creating an account must not automatically make a seller verified.
+
+F. OPTIONAL USER ACCOUNTS
+
+Allow guests to search without registering.
+
+If authentication is available, users can:
+* Create an account.
+* Save products.
+* View recent searches.
+* Manage account details.
+* Delete their account.
+
+Do not require authentication for basic product discovery.
+
+G. SUPPORT AND INFORMATION PAGES
+
+Create About, Help, Contact, Privacy, and Terms pages.
+
+Explain:
+* What LUXA does.
+* How product discovery works.
+* How external listings are sourced.
+* What verification means.
+* Why prices and inventory can change.
+* How to report inaccurate or suspicious listings.
+
+Privacy and legal text must be treated as drafts until appropriately reviewed. Do not falsely claim certification or regulatory compliance.
+
+==================================================
+5. GEMMA AI INTEGRATION
+==================================================
+
+Design the AI layer to support a Gemma model through a configurable, secure server-side inference adapter.
+
+The AI should understand natural-language product requests and convert them into structured search criteria.
+
+Example:
+User: "I need a laptop for music production under 250,000 naira in Ekiti."
+
+Expected interpretation:
+* Intent: product discovery.
+* Category: laptop.
+* Use case: music production.
+* Maximum price: 250000.
+* Currency: NGN.
+* Location: Ekiti State, Nigeria.
+* Specifications: only those explicitly requested or subsequently clarified.
+
+Another example:
+User: "I need something that can help me record clean vocals at home."
+
+The AI should understand the use case, suggest relevant product categories when appropriate, and ask a brief clarifying question only when necessary.
+
+Create a validated search-intent schema containing:
+* Original query.
+* Intent.
+* Product category.
+* Keywords and synonyms.
+* Use case.
+* Minimum and maximum price.
+* Currency.
+* Location.
+* Requested specifications.
+* Delivery preferences when supplied.
+* Sorting preferences when supplied.
+
+Requirements:
+* Validate structured model output.
+* Handle spelling mistakes and common synonyms.
+* Preserve the original user query.
+* Normalize prices and locations.
+* Apply hard price and category filters in the search service.
+* Do not trust AI-generated product details without checking the catalog.
+* Never allow model output to execute arbitrary SQL or code.
+* Provide sensible error handling and timeouts.
+* Provide a fallback keyword search if AI is unavailable.
+* Avoid sending unnecessary personal information to the model.
+
+GEMMA CONFIGURATION
+
+Use a provider adapter that allows the model to be changed without rewriting the entire application.
+
+Configure the selected Gemma model through environment variables such as:
+GEMMA_API_URL
+GEMMA_API_KEY
+GEMMA_MODEL_ID
+
+Use only the variables and endpoint format appropriate to the selected hosting provider.
+
+Keep credentials server-side. Never expose private keys in browser code.
+
+Do not assume that Gemma automatically has web browsing, product data, or internet access. The search service must retrieve the evidence, and the model must interpret or organize it.
+
+If the builder's default model is Gemini or another model, clearly document that fact. Do not claim Gemma is running until the actual Gemma endpoint has been configured and tested.
+
+If credentials are unavailable, implement a working mock AI provider for development and a keyword-based fallback. Clearly identify mock functionality.
+
+==================================================
+6. REAL SELLER DISCOVERY ENGINE
+==================================================
+
+This is LUXA's most important capability.
+
+Build a modular discovery service that can search both its own catalog and permitted external sources.
+
+SOURCE A: REGISTERED SELLERS
+* Search products submitted by registered sellers.
+* Filter by category, price, location, and supported attributes.
+* Rank results by relevance.
+* Display seller information and listing freshness.
+
+SOURCE B: EXTERNAL WEB SEARCH
+* Create a configurable server-side adapter for an authorized search API.
+* Discover relevant public product pages, retailer pages, and business websites.
+* Normalize available titles, snippets, URLs, source names, and metadata.
+* Preserve the original source URL.
+* Never treat search snippets as proof of current price or stock.
+* Store credentials securely.
+
+SOURCE C: PRODUCT FEEDS AND RETAILER APIS
+* Support authorized retailer APIs, product feeds, affiliate feeds, and partner integrations.
+* Normalize incoming data into the LUXA listing schema.
+* Preserve source attribution.
+* Respect rate limits, data licensing, and provider terms.
+* Support scheduled synchronization when infrastructure permits.
+
+SOURCE D: PUBLIC BUSINESS DIRECTORIES
+* Support permitted business-directory and public-business data sources.
+* Record where information came from and when it was retrieved.
+* Distinguish a discovered business from a verified seller.
+* Do not infer legitimacy from website presence alone.
+
+SOURCE E: SELLER-SUBMITTED LISTINGS
+* Provide simple manual product entry.
+* Design for future CSV import and authorized integrations.
+* Allow sellers to keep prices, stock, and contact details updated.
+
+DISCOVERY PIPELINE
+
+For each user search:
+1. Validate the query.
+2. Parse the user's intent using Gemma or a fallback.
+3. Search the internal product catalog.
+4. Query configured external discovery sources when enabled.
+5. Normalize all retrieved records.
+6. Deduplicate equivalent listings without losing seller or source links.
+7. Apply category, budget, location, and other filters.
+8. Rank the actual retrieved results.
+9. Add provenance, freshness, and verification labels.
+10. Return paginated results.
+11. Handle errors from individual sources without crashing the whole application.
+
+External search must be optional. Missing credentials must not break the app.
+
+Do not indiscriminately scrape websites, bypass access controls, defeat anti-bot measures, or ignore terms of service. Use authorized APIs, feeds, structured data, and permitted public sources.
+
+If no external search source is configured, state that limitation and continue using the available internal catalog.
+
+==================================================
+7. PRODUCT MATCHING AND RANKING
+==================================================
+
+Build a useful search system that supports:
+* Exact product-name matching.
+* Partial keyword matching.
+* Synonyms and common spelling errors.
+* Category matching.
+* Price filtering.
+* Location and delivery filtering when supported.
+* Specification matching.
+* Relevance ranking.
+* Duplicate listing handling.
+* Sorting and pagination.
+
+Rank products using actual evidence, including:
+* Match to the user's request.
+* Specification fit.
+* Budget fit.
+* Location or delivery fit.
+* Listing freshness.
+* Source quality.
+
+Do not secretly prioritize paying sellers over better organic matches.
+
+If promoted listings are added later, label them as sponsored.
+
+Semantic embeddings and vector search may be added when useful, but they must not prevent the first version from working.
+
+==================================================
+8. DATA MODEL AND DATABASE
+==================================================
+
+Use PostgreSQL where supported, or the most reliable persistent database available in the builder's environment.
+
+Create appropriate models or tables for:
+
+USERS
+* id
+* email or supported authentication identifier
+* role
+* created_at
+* updated_at
+
+SELLERS
+* id
+* owner_user_id
+* business_name
+* description
+* website
+* public_contact_options
+* city
+* state
+* country
+* verification_status
+* verification_details
+* created_at
+* updated_at
+
+PRODUCTS
+* id
+* seller_id where applicable
+* title
+* normalized_title
+* description
+* category
+* attributes
+* image_url
+* created_at
+* updated_at
+
+LISTINGS
+* id
+* product_id
+* seller_id where applicable
+* source_type
+* source_name
+* source_url
+* price
+* currency
+* stock_status
+* location
+* delivery_information
+* last_checked_at
+* last_updated_at
+* listing_status
+
+SEARCH_HISTORY
+* id
+* user_id when applicable
+* query
+* normalized_intent
+* created_at
+
+SAVED_PRODUCTS
+* id
+* user_id
+* listing_id
+* created_at
+
+REPORTS
+* id
+* reporter_user_id when applicable
+* listing_id or seller_id
+* reason
+* status
+* created_at
+
+DISCOVERY_SOURCES
+* id
+* source_name
+* source_type
+* configuration_status
+* last_successful_sync
+* last_error
+* created_at
+* updated_at
+
+Use suitable primary keys, foreign keys, indexes, uniqueness constraints, pagination, and validation.
+
+Use a precise numeric representation for monetary values. Store prices with explicit currencies and never assume every listing uses naira.
+
+Create migrations or a repeatable database setup and a seed script containing clearly labelled fictional demonstration data.
+
+==================================================
+9. LOCATION AND NIGERIAN MARKET SUPPORT
+==================================================
+
+Begin with Ado-Ekiti and Ekiti State, but allow discovery across Nigeria.
+
+Support:
+* State and city selection.
+* Nationwide online sellers.
+* Delivery coverage where known.
+* NGN currency formatting.
+* Other currencies when provided by real listings.
+* Search requests that mention a location in natural language.
+* Manual location selection without requiring GPS permission.
+
+Do not request precise location unless necessary and explicitly permitted by the user.
+
+Do not promise that a seller is nearby unless the available location data supports that statement.
+
+Design the location system so more states, cities, and countries can be added later.
+
+==================================================
+10. SELLER TRUST AND LISTING FRESHNESS
+==================================================
+
+Use clear verification states such as:
+* Unverified.
+* Verification pending.
+* Business details checked.
+* Platform verified.
+
+Define exactly what each state means. Only award a status after the corresponding checks are completed.
+
+A public website or search result alone does not constitute verification.
+
+For product listings:
+* Show the last-updated or last-checked time where available.
+* Flag outdated information.
+* Distinguish seller-reported stock from independently confirmed stock.
+* Never mark a product available without supporting evidence.
+* Provide a reporting process for suspicious or inaccurate information.
+
+Do not invent ratings, testimonials, transaction counts, or trust scores.
+
+==================================================
+11. SECURITY AND RELIABILITY
+==================================================
+
+Implement:
+* Secure authentication.
+* Server-side authorization.
+* Ownership checks for seller listings.
+* Input validation.
+* Safe output rendering.
+* Database access restrictions.
+* Rate limiting where supported.
+* Safe image-upload validation.
+* Server-side secret management.
+* Error handling without exposing secrets.
+* Protection against SQL injection and common web vulnerabilities.
+* Account deletion and appropriate data retention.
+* Logging that avoids unnecessary personal information.
+* Request timeouts and limits for external integrations.
+* Validation of URLs submitted by users.
+* Protection against server-side request forgery and unsafe redirects.
+* Database row-level security when using Supabase.
+* Protection against unauthorized access to seller and user records.
+
+Never store passwords in plaintext.
+
+Never expose privileged database keys, service-role keys, or private AI credentials in frontend code.
+
+==================================================
+12. TECHNICAL ARCHITECTURE
+==================================================
+
+Use the stack best supported by the chosen builder.
+
+Preferred options:
+* Frontend: React and TypeScript.
+* UI: responsive, accessible component system.
+* Backend: secure server-side API.
+* Database: PostgreSQL or a supported managed database.
+* Authentication: supported secure authentication provider.
+* AI: configurable Gemma provider adapter.
+* Search: database full-text search initially.
+* External discovery: configurable server-side search adapter.
+* Hosting: a supported deployment platform.
+
+Adapt to the environment instead of adding incompatible dependencies.
+
+Keep business logic, AI integration, data retrieval, and user-interface components separated enough to maintain and extend the project.
+
+Use persistent storage for real user-created data. Do not mistake browser-only temporary state for a complete backend.
+
+==================================================
+13. ENVIRONMENT VARIABLES AND INTEGRATIONS
+==================================================
+
+Create a documented .env.example with placeholders for the integrations actually used.
+
+Potential variables:
+DATABASE_URL
+AUTH_PROVIDER_URL
+AUTH_PROVIDER_PUBLIC_KEY
+AUTH_PROVIDER_SECRET_KEY
+GEMMA_API_URL
+GEMMA_API_KEY
+GEMMA_MODEL_ID
+EXTERNAL_SEARCH_API_URL
+EXTERNAL_SEARCH_API_KEY
+PUBLIC_APP_URL
+
+Use the actual variable names required by the selected services. Keep all private credentials server-side.
+
+Never invent API keys or claim an external service is connected when it is not.
+
+If a provider is unavailable, create a clean adapter interface and explain how to configure it later.
+
+==================================================
+14. PERFORMANCE AND USER EXPERIENCE
+==================================================
+
+The app should:
+* Load quickly on mobile networks.
+* Display responsive layouts on phones, tablets, and desktop.
+* Avoid unnecessary dependencies.
+* Optimize image loading.
+* Use pagination for large result sets.
+* Provide visible loading feedback.
+* Handle empty results gracefully.
+* Preserve useful search state when navigating.
+* Have accessible controls and readable text.
+* Avoid fake counters and placeholder actions that appear functional but do nothing.
+
+Every visible button should have a defined, functional behavior or be clearly marked as unavailable.
+
+==================================================
+15. TESTING AND ACCEPTANCE CRITERIA
+==================================================
+
+Run the available checks and verify the following:
+
+1. The home page loads.
+2. Search accepts natural-language queries.
+3. Query parsing returns valid structured criteria.
+4. The internal catalog returns relevant records.
+5. Category, price, and location filters work.
+6. Sorting and pagination work.
+7. Product detail pages show the correct listing.
+8. Original external links work when configured.
+9. Contact actions use valid destinations.
+10. Sellers can create and edit their own listings.
+11. Sellers cannot edit other sellers' listings.
+12. Protected dashboard actions require authorization.
+13. Demo listings are visibly labelled.
+14. Missing Gemma credentials trigger the documented fallback.
+15. Missing external-search credentials do not crash the app.
+16. AI errors are handled safely.
+17. No fabricated live products, prices, reviews, or verification badges appear.
+18. Secrets are not exposed in client-side code.
+19. Mobile layouts work at common screen sizes.
+20. Build and type checks pass where supported.
+
+Fix any issues discovered. Do not claim tests passed unless they were actually run.
+
+==================================================
+16. IMPLEMENTATION ORDER
+==================================================
+
+Build in this order:
+
+STEP 1
+Inspect the environment and choose a compatible architecture.
+
+STEP 2
+Build the LUXA interface, home page, search form, results page, product details, and seller profiles.
+
+STEP 3
+Implement the database schema and seed clearly labelled demo listings.
+
+STEP 4
+Implement functional catalog search, filtering, sorting, pagination, and navigation.
+
+STEP 5
+Implement secure seller authentication and product management where supported.
+
+STEP 6
+Build the AI intent parser interface and a reliable keyword fallback.
+
+STEP 7
+Add the configurable Gemma integration and document the setup.
+
+STEP 8
+Implement the external discovery adapter and configure a real permitted search provider if credentials are available.
+
+STEP 9
+Add listing freshness, source attribution, trust states, and reporting.
+
+STEP 10
+Run the tests, fix errors, and provide setup and deployment instructions.
+
+Do not block the first working version on optional integrations.
+
+==================================================
+17. REQUIRED DELIVERABLES
+==================================================
+
+Deliver:
+* A functioning LUXA web application.
+* A live preview if supported.
+* Working main user journeys.
+* Database schema and migrations.
+* Clearly labelled demo seed data.
+* Environment configuration documentation.
+* Instructions for enabling Gemma.
+* Instructions for configuring external product discovery.
+* Setup and deployment instructions.
+* Test results.
+* A list of features that are complete, mocked, or awaiting credentials.
+* A list of remaining blockers.
+
+==================================================
+18. FINAL INSTRUCTIONS TO THE BUILDER
+==================================================
+
+START BUILDING IMMEDIATELY.
+
+Do not answer with only a plan, architecture diagram, design proposal, or generic recommendations.
+
+Create the actual application in the current environment.
+
+Prioritize the smallest complete, usable, testable version of LUXA.
+
+Use sensible, reversible defaults. Do not ask unnecessary questions.
+
+If a feature needs unavailable credentials, implement a safe integration interface, keep the rest of the app working, and explain exactly what must be configured.
+
+Do not falsely claim that Gemma, external web search, live inventory, seller verification, or a production database is operational unless it has actually been configured and tested.
+
+Build the application, inspect the result, run available checks, fix errors, and provide the next steps.
+
+THE FIRST GOAL IS A WORKING PRODUCT-DISCOVERY EXPERIENCE. THE LONG-TERM GOAL IS A TRUSTWORTHY AI-POWERED PLATFORM THAT CONNECTS CONSUMERS TO REAL SELLERS ACROSS NIGERIA AND EVENTUALLY BEYOND.

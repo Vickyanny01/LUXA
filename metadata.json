@@ -1,0 +1,7 @@
+{
+  "name": "LUXA - AI Product Discovery",
+  "description": "AI-powered product discovery and seller connection platform for Ado-Ekiti, Ekiti State, and Nigeria.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
